@@ -85,8 +85,8 @@ jobs:
       # Create the Elastic Beanstalk application
       - name: Create EBS application
         run: |
-          eb init -p python-3.6 hello-world --region us-east-1
+          eb init -p python-3.6 github-api --region us-east-1
       # Create the Elastic Beanstalk environment
       - name: Create test github-api-environment 
         run: |
-          eb create github-api-environment 
+          (eb use github-api-environment && eb status github-api-environment && eb deploy) || eb create github-api-environment
