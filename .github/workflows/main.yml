@@ -86,6 +86,10 @@ jobs:
       - name: Create EBS application
         run: |
           eb init -p python-3.6 github-api --region us-east-1
+          
+      - name: Set EBS Environment Variables
+        run: |
+          eb setenv API_GITHUB_TOKEN=${{ secrets.API_GITHUB_TOKEN }}
       # Create the Elastic Beanstalk environment
       - name: Create test github-api-environment 
         run: |
