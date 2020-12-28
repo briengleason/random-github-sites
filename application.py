@@ -28,7 +28,7 @@ def index():
 
 @application.route('/api/random_site', methods=['POST'])
 @auth.login_required
-@cross_origin(origin='*',headers=['Content-Type','Authorization'])
+@cross_origin(origin='*')
 def get_random_site():
     return find_random_page()
 
