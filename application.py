@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_cors import CORS
 from query_github_sites import find_random_page
 
 application = Flask(__name__)
