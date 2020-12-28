@@ -1,3 +1,4 @@
 requests
 pprintpp
 flask
+flask-cors
