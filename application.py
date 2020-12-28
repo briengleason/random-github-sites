@@ -2,6 +2,7 @@ from flask import Flask
 from query_github_sites import find_random_page
 
 application = Flask(__name__)
+CORS(application)
 
 @application.route('/')
 def index():
