@@ -2,3 +2,4 @@ requests
 pprintpp
 flask
 flask-cors
+Flask-HTTPAuth

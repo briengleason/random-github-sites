@@ -90,6 +90,8 @@ jobs:
       - name: Set EBS Environment Variables
         run: |
           eb setenv API_GITHUB_TOKEN=${{ secrets.API_GITHUB_TOKEN }}
+          eb setenv API_USERNAME=${{ secrets.API_USERNAME }}
+          eb setenv API_PASSWORD=${{ secrets.API_PASSWORD }}
       # Create the Elastic Beanstalk environment
       - name: Create test github-api-environment 
         run: |
