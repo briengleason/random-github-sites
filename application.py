@@ -13,7 +13,7 @@ application.config['CORS_HEADERS'] = 'Content-Type'
 
 auth = HTTPBasicAuth()
 users = {
-    os.environ.get('API_USERNAME'): generate_password_hash(os.environ('API_PASSWORD'))
+    os.environ.get('API_USERNAME'): generate_password_hash(os.environ.get('API_PASSWORD'))
 }
 
 @auth.verify_password
