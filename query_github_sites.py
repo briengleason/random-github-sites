@@ -5,8 +5,10 @@ import os
 def find_random_page():
 
     token = os.environ.get('API_GITHUB_TOKEN')
-
-    owner = 'apache'
+    
+    
+    ownerList = ['apache', 'microsoft', 'google', 'facebook', 'alibaba', 'vuejs', 'tensorflow', 'freecodecamp', 'tencent', 'github']
+    owner = random.choice(ownerList)
 
     query_url = f"https://api.github.com/orgs/{owner}/repos"
 
